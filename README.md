@@ -7,10 +7,10 @@ Examen final del curso
 
 | Preguntas | Respuestas |
 |:----------|:-----------|
-| Nombre y Rol | Dale una identidad y define su ocupación (ej. Ana, la Diseñadora Freelance) |
-| Demográficos | Indica datos demográficos básicos, tales como edad, ubicación, nivel de ingresos o contexto laboral | 
-| Objetivos y Motivaciones | ¿Qué valor busca obtener de una visualización de datos? ¿Qué intenta aprender? | 
-| Puntos de dolor (Pain points) | ¿Cuáles son sus principales frustraciones, problemas o barreras actuales? |
+| Nombre y Rol | Elisa, Profesora de básica que quiere enseñar a sus alumnos sobre qué es la migración y necesita ejemplos |
+| Demográficos | 32 años, Santiago de Chile, Escuela Pública. | 
+| Objetivos y Motivaciones | Necesita una página web para enseñar de manera fácil y visualmente simple. Que se entienda. No quiere tanta información específica, sino un paneo general sobre el tema, para que si los niños quieren volver a la página no se pierdan. | 
+| Puntos de dolor (Pain points) | Actualmente no encuentra páginas web científicas simples que les pueda compartir a sus alumnos. Todas son muy enredadas o específicas. |
 
 
 #### Un extremo
