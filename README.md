@@ -1,8 +1,9 @@
 # FINAL
-Examen final del curso
+Desarrollo del examen final del curso.
+
+- - - - -
 
 ### Para quién:
-
 #### Mainstream
 
 | Preguntas | Respuestas |
