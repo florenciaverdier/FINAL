@@ -63,13 +63,14 @@ Se recomienda evitar la cantidad de animaciones y transiciones que tiene, ya que
 Pantallazo. 
 <img width="1200" height="794" alt="image" src="https://github.com/user-attachments/assets/7f6441fe-5d96-4392-8e25-5ed0ec41e510" />
 
-Se rescata la utilización de ilustraciones y colores. Esto lo hace más infantil y cercano. También se rescata que permanezca en el formato infográfico. Si, habrá que tener cuidado con los cuadros de texto, ya que son varios y en diferentes posiciones de la página. Prestar atención al ViewBox. Lo mismo con respecto a la cantidad de imágenes.
+Se rescata la utilización de ilustraciones y colores. Esto lo hace más infantil y cercano. Si, habrá que tener cuidado con los cuadros de texto, ya que son varios y en diferentes posiciones de la página. Prestar atención al ViewBox. Lo mismo con respecto a la cantidad de imágenes.
 
-#### Referente 3: Nombre con link
+#### Referente 3: Bird protection - Infografías Steffie Padmos (https://www.steffiepadmos.com/work/beach-bird-protection/) 
 
 Pantallazo. 
+<img width="4961" height="3508" alt="image" src="https://github.com/user-attachments/assets/ae62d907-e2aa-45a0-be94-299e193a9b05" />
 
-Describa lo positivo a rescatar y, si fuese posible, lo negativo a evitar.
+Se rescata el formato infografía y la utilización de recursos gráficos para mostrar información, así como también la simplicidad y legilibilidad de la lámina. OJO! Ya que en los gráficos de abajo no salen los nombres de las variables y puede que esto complique la lectura, o falte información.
 
 
 #### Moodboard
