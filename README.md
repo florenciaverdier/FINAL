@@ -46,12 +46,14 @@ Se ofrecerá una infografía digital, que tratará a modo general las migracione
 
 Agregue a continuación 3 referentes y un mooadboard de referentes. 
 
-#### Referente 1: Nombre con link
+#### Referente 1: Humedal Río Maipo - Página web (https://humedalriomaipo.cl/explora-el-humedal/recorre-la-infraestructura/)
 
 Pantallazo.
-<img width="1365" height="682" alt="image" src="https://github.com/user-attachments/assets/743a1c21-65fc-458b-9898-9b4ccd693306" />
+<img width="1362" height="604" alt="image" src="https://github.com/user-attachments/assets/6fd63583-b8a0-4640-9be7-e42cdcf7faea" />
+<img width="1365" height="600" alt="image" src="https://github.com/user-attachments/assets/1804125f-9d7f-44b5-8f6f-8addb7d76de2" />
 
-Describa lo positivo a rescatar y, si fuese posible, lo negativo a evitar.
+Se rescata la estética natural y la simpleza de la página. No tiene mucho texto y las imágenes tienen protagonismo.
+Evitar la cantidad de animaciones y transiciones que tiene, ya que no todas se aprendieron en el desarrollo del curso.
 
 #### Referente 2: Nombre con link
 
