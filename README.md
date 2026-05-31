@@ -36,7 +36,7 @@ Examen final del curso
 ### Segundo, con qué:
 
 Trabajaremos con la base de datos de Max Planck Institute for Animal Behavior  (https://github.com/movebank/movebank-api-doc?ref=dr-pa&utm_medium=public-apis-website) 
-Esta forma parte de la Max Planck Society, organización científicas ubicada en Europa. (ttps://www.mpg.de/en)
+Esta forma parte de la Max Planck Society, organización científicas ubicada en Europa. (https://www.mpg.de/en)
 
 
 
@@ -49,8 +49,11 @@ Agregue a continuación 3 referentes y un mooadboard de referentes.
 #### Referente 1: Humedal Río Maipo - Página web (https://humedalriomaipo.cl/explora-el-humedal/recorre-la-infraestructura/)
 
 Pantallazo.
-<img width="1362" height="604" alt="image" src="https://github.com/user-attachments/assets/6fd63583-b8a0-4640-9be7-e42cdcf7faea" />
-<img width="1365" height="600" alt="image" src="https://github.com/user-attachments/assets/1804125f-9d7f-44b5-8f6f-8addb7d76de2" />
+<img width="1352" height="416" alt="image" src="https://github.com/user-attachments/assets/3dd8d931-d49a-4556-bc83-6e8de926bada" />
+<img width="1365" height="600" alt="image" src="https://github.com/user-attachments/assets/70557b88-833f-44c2-a3ae-a9c190f80757" />
+<img width="1365" height="593" alt="image" src="https://github.com/user-attachments/assets/cbe818f5-4c59-4764-8e31-47d9ccae7491" />
+<img width="1365" height="602" alt="image" src="https://github.com/user-attachments/assets/e30cbbd5-0230-4452-8c71-2a5c257a93a6" />
+
 
 Se rescata la estética natural y la simpleza de la página. No tiene mucho texto y las imágenes tienen protagonismo.
 Evitar la cantidad de animaciones y transiciones que tiene, ya que no todas se aprendieron en el desarrollo del curso.
