@@ -58,11 +58,12 @@ Pantallazo.
 Se rescata la estética natural y la simpleza de la página. No tiene mucho texto y las imágenes tienen protagonismo.
 Se recomienda evitar la cantidad de animaciones y transiciones que tiene, ya que no todas se aprendieron en el desarrollo del curso.
 
-#### Referente 2: Nombre con link
+#### Referente 2: Libro Amazing Nature for World of Wonder series (https://www.behance.net/gallery/116920759/Amazing-Nature-for-World-of-Wonder-series?tracking_source=project_owner_other_projects&utm_source=Pinterest&utm_medium=organic)
 
 Pantallazo. 
+<img width="1200" height="794" alt="image" src="https://github.com/user-attachments/assets/7f6441fe-5d96-4392-8e25-5ed0ec41e510" />
 
-Describa lo positivo a rescatar y, si fuese posible, lo negativo a evitar.
+Se rescata la utilización de ilustraciones y colores. Esto lo hace más infantil y cercano. También se rescata que permanezca en el formato infográfico. Si, habrá que tener cuidado con los cuadros de texto, ya que son varios y en diferentes posiciones de la página. Prestar atención al ViewBox. Lo mismo con respecto a la cantidad de imágenes.
 
 #### Referente 3: Nombre con link
 
