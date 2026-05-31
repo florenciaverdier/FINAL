@@ -7,10 +7,10 @@ Examen final del curso
 
 | Preguntas | Respuestas |
 |:----------|:-----------|
-| Nombre y Rol | Elisa, Profesora de básica que quiere enseñar a sus alumnos sobre qué es la migración y necesita ejemplos |
-| Datos Demográficos | 32 años, Santiago de Chile, Escuela Pública. | 
-| Objetivos y Motivaciones | Necesita una página web para enseñar de manera fácil y visualmente simple. Que se entienda. No quiere tanta información específica, sino un paneo general sobre el tema, para que si los niños quieren volver a la página no se pierdan. | 
-| Puntos de dolor (Pain points) | Actualmente no encuentra páginas web científicas simples que les pueda compartir a sus alumnos. Todas son muy enredadas o específicas. |
+| Nombre y Rol | Antonio, Alumno de 6to Básico. |
+| Datos Demográficos | 11 años, Santiago de Chile, Escuela Pública. | 
+| Objetivos y Motivaciones | Para la asignatura de Ciencias Naturales, tiene que hacer una presentación sobre qué es la migración en los animales. No le piden información específica, sino un paneo general del tema.| 
+| Puntos de dolor (Pain points) | Él sabe navegar por internet, pero sólo encuentra páginas científicas y complicadas. Necesita algo más simple, que él con su edad pueda entender. |
 
 
 #### Un extremo
