@@ -27,10 +27,10 @@ Desarrollo del examen final del curso.
 
 | Preguntas | Respuestas |
 |:----------|:-----------|
-| Nombre y Rol | Dale una identidad y define su ocupación (ej. Ana, la Diseñadora Freelance) |
-| Datos demográficos | Indica datos demográficos básicos, tales como edad, ubicación, nivel de ingresos o contexto laboral | 
-| Objetivos y Motivaciones | ¿Qué valor busca obtener de una visualización de datos? ¿Qué intenta aprender? | 
-| Puntos de dolor (Pain points) | ¿Cuáles son sus principales frustraciones, problemas o barreras actuales? |
+| Nombre y Rol | Pablo, Estudiante de Biología |
+| Datos demográficos | 22 años, Santiago de Chile, estudiante universitario.  | 
+| Objetivos y Motivaciones | Maneja herramientas digitales y consulta fuentes científicas con frecuencia. Busca información confiable, visualizaciones claras y acceso a datos respaldados científicamente. | 
+| Puntos de dolor (Pain points) | Muchas infografías simplifican demasiado la información y omiten el origen de los datos. Le frustra cuando las visualizaciones son atractivas pero poco informativas. |
 
 - - - - - 
 
