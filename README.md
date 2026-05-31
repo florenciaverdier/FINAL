@@ -1,7 +1,7 @@
 # FINAL
 Examen final del curso
 
-### Primero, para quién:
+### Para quién:
 
 #### Mainstream
 
@@ -33,18 +33,18 @@ Examen final del curso
 
 - - - - - 
 
-### Segundo, con qué:
+### Con qué:
 
 Trabajaremos con la base de datos de Max Planck Institute for Animal Behavior  (https://github.com/movebank/movebank-api-doc?ref=dr-pa&utm_medium=public-apis-website) 
 Esta forma parte de la Max Planck Society, organización científicas ubicada en Europa. (https://www.mpg.de/en)
 
 
 
-### Tercero, qué: 
+### Qué: 
 
 Se ofrecerá una infografía digital, que tratará a modo general las migraciones de animales en el mundo.
 
-Agregue a continuación 3 referentes y un mooadboard de referentes. 
+A continuación 3 referentes que inspiran:
 
 #### Referente 1: Humedal Río Maipo - Página web (https://humedalriomaipo.cl/explora-el-humedal/recorre-la-infraestructura/)
 
