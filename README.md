@@ -35,19 +35,21 @@ Examen final del curso
 
 ### Segundo, con qué:
 
-Indique las bases de datos que utilizará. 
+Trabajaremos con la base de datos de Max Planck Institute for Animal Behavior  (https://github.com/movebank/movebank-api-doc?ref=dr-pa&utm_medium=public-apis-website) 
+Esta forma parte de la Max Planck Society, organización científicas ubicada en Europa. (ttps://www.mpg.de/en)
 
-- - - - - -
+
 
 ### Tercero, qué: 
 
-Describa lo que ofrecerá, acaso una infografía o un dashboard. 
+Se ofrecerá una infografía digital, que tratará a modo general las migraciones de animales en el mundo.
 
 Agregue a continuación 3 referentes y un mooadboard de referentes. 
 
 #### Referente 1: Nombre con link
 
 Pantallazo.
+<img width="1365" height="682" alt="image" src="https://github.com/user-attachments/assets/743a1c21-65fc-458b-9898-9b4ccd693306" />
 
 Describa lo positivo a rescatar y, si fuese posible, lo negativo a evitar.
 
