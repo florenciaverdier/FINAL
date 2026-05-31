@@ -56,7 +56,7 @@ Pantallazo.
 
 
 Se rescata la estética natural y la simpleza de la página. No tiene mucho texto y las imágenes tienen protagonismo.
-Evitar la cantidad de animaciones y transiciones que tiene, ya que no todas se aprendieron en el desarrollo del curso.
+Se recomienda evitar la cantidad de animaciones y transiciones que tiene, ya que no todas se aprendieron en el desarrollo del curso.
 
 #### Referente 2: Nombre con link
 
