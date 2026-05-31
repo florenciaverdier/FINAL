@@ -38,17 +38,17 @@ Examen final del curso
 Trabajaremos con la base de datos de Max Planck Institute for Animal Behavior  (https://github.com/movebank/movebank-api-doc?ref=dr-pa&utm_medium=public-apis-website) 
 Esta forma parte de la Max Planck Society, organización científicas ubicada en Europa. (https://www.mpg.de/en)
 
-
+- - - - -
 
 ### Qué: 
 
 Se ofrecerá una infografía digital, que tratará a modo general las migraciones de animales en el mundo.
 
+
 A continuación 3 referentes que inspiran:
 
 #### Referente 1: Humedal Río Maipo - Página web (https://humedalriomaipo.cl/explora-el-humedal/recorre-la-infraestructura/)
 
-Pantallazo.
 <img width="1352" height="416" alt="image" src="https://github.com/user-attachments/assets/3dd8d931-d49a-4556-bc83-6e8de926bada" />
 <img width="1365" height="600" alt="image" src="https://github.com/user-attachments/assets/70557b88-833f-44c2-a3ae-a9c190f80757" />
 <img width="1365" height="593" alt="image" src="https://github.com/user-attachments/assets/cbe818f5-4c59-4764-8e31-47d9ccae7491" />
@@ -60,14 +60,13 @@ Se recomienda evitar la cantidad de animaciones y transiciones que tiene, ya que
 
 #### Referente 2: Libro Amazing Nature for World of Wonder series (https://www.behance.net/gallery/116920759/Amazing-Nature-for-World-of-Wonder-series?tracking_source=project_owner_other_projects&utm_source=Pinterest&utm_medium=organic)
 
-Pantallazo. 
 <img width="1200" height="794" alt="image" src="https://github.com/user-attachments/assets/7f6441fe-5d96-4392-8e25-5ed0ec41e510" />
 
 Se rescata la utilización de ilustraciones y colores. Esto lo hace más infantil y cercano. Si, habrá que tener cuidado con los cuadros de texto, ya que son varios y en diferentes posiciones de la página. Prestar atención al ViewBox. Lo mismo con respecto a la cantidad de imágenes.
 
 #### Referente 3: Bird protection - Infografías Steffie Padmos (https://www.steffiepadmos.com/work/beach-bird-protection/) 
 
-Pantallazo. 
+<img width="4961" height="3508" alt="image" src="https://github.com/user-attachments/assets/b0930b8b-cd17-4c82-a48a-1d71f57294e5" />
 <img width="4961" height="3508" alt="image" src="https://github.com/user-attachments/assets/ae62d907-e2aa-45a0-be94-299e193a9b05" />
 
 Se rescata el formato infografía y la utilización de recursos gráficos para mostrar información, así como también la simplicidad y legilibilidad de la lámina. OJO! Ya que en los gráficos de abajo no salen los nombres de las variables y puede que esto complique la lectura, o falte información.
