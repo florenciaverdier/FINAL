@@ -76,6 +76,9 @@ Se rescata el formato infografía y la utilización de recursos gráficos para m
 #### Moodboard
 Moodboard conceptual de inspiración.
 <img width="1920" height="1080" alt="io" src="https://github.com/user-attachments/assets/2b2ae330-4203-480d-a25a-6e01cd23803e" />
+- Colores cálidos
+- Texturas orgánicas/naturales
+- Uso de espacios en blanco
 
 
 
