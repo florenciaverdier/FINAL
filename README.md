@@ -74,7 +74,9 @@ Se rescata el formato infografía y la utilización de recursos gráficos para m
 
 
 #### Moodboard
-<img width="1187" height="1080" alt="moodboard" src="https://github.com/user-attachments/assets/3a175884-d038-4771-adc0-0680d4673de6" />
+Moodboard conceptual de inspiración.
+<img width="1920" height="1080" alt="io" src="https://github.com/user-attachments/assets/2b2ae330-4203-480d-a25a-6e01cd23803e" />
+
 
 
 
