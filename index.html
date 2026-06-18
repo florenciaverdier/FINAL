@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-wivdth, initial-scale=1" />
+        <title>Fío Fío</title>
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            :root {
+                --texto: #000;
+                --fondo: #eee;
+                --blanco: #fff;
+                --fuente: "Inconsolata", monospace;
+                --otrafuente: "Roboto", sans-serif;
+            }
+
+            body {
+                font-family: var(--fuente);
+                background: var(--fondo);
+            }
+            svg#escondido {
+                display: none;
+            }
+
+            div#contenedor {
+                width: 90%;
+                max-width: 100%;
+                margin: 1rem auto;
+                box-shadow: 0 0 3px rgba(200, 200, 200, 0.5);
+                padding: 2rem;
+                background: var(--blanco);
+            }
+
+            h1 {
+                font-family: var(--otrafuente);
+                text-align: center;
+                font-size: calc(1rem + 2vw + 2vh);
+                margin: 3vw auto;
+                padding-left:calc(2rem + 2vw + 2vh);
+                background: url('');
+                background-repeat: no-repeat;
+                background-size:calc(1.5rem + 2vw + 2vh);
+            }
+
+             h2{
+                font-family: var(--otrafuente);
+                margin:3rem 0 1rem 0;
+            }
+
+            ol,
+            ul {
+                list-style-position: inside;
+                list-style: none;
+                width: 100%;
+                margin: 1rem 0;
+                border-top: 1px solid silver;
+                font-family: var(--fuente);
+            }
+
+            ol li {
+                border-bottom: 1px solid silver;
+                padding: 0.5rem 0;
+            }
+
+            ol li:last-child {
+                border-bottom: 3px solid silver;
+            }
+
+            ol li a {
+                text-decoration: none;
+                color: var(--texto);
+                transition: all ease 0.5s;
+            }
+
+            ol li a:hover {
+                letter-spacing: 0.1rem;
+                transition: all ease 0.5s;
+            }
+
+            ol li a:nth-child(1) {
+                display: inline-block;
+                width: 50%;
+            }
+
+            ol li a[target="_blank"] {
+                margin-left: 1rem;
+            }
+
+
+
+            .tiny {
+                width:2rem;
+                height: auto;
+                border-radius: 50% 50%;
+                margin-right: 0.5rem;
+            }
+
+            #map { height: 500px; }
+            
+        </style>
+
+         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+
+    </head>
+
+    <body>
+        <div id="contenedor">
+          <h1>Migración del Fío Fío chileno</h1>
+           <ol id="uno"> </ol>
+        </div>
+
+      <div id="map"></div>
+
+      <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+
+     <script>
+        var map = L.map('map').setView([-54.93, -67.65], 10);
+
+            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+        var puntos = [ 
+            // Ejemplo de Claude:{nombre: "Individuo 1", lat: -33.45, lng: -70.66} 
+
+            {nombre: "AA04176", lat: -54.93, lng: -67.65},
+            {nombre: "AA04174", lat: -54.93, lng: -67.65 },
+            {nombre: "AA02968", lat: -54.93, lng: -67.65},
+            {nombre: "A03511", lat: -54.93, lng: -67.65},
+            {nombre: "AA04464", lat: -54.93, lng: -67.65},
+            {nombre: "AA04449", lat: -54.93, lng: -67.65},
+            {nombre: "AA06147", lat: -54.93, lng: -67.65},
+            {nombre: "AA04484", lat: -54.93, lng: -67.65},
+            {nombre: "AA06233", lat: -54.93, lng: -67.65},
+            {nombre: "AA06462", lat: -54.93, lng: -67.65},
+            {nombre: "AA06493", lat: -54.93, lng: -67.65},
+            {nombre: "AA07003", lat: -54.93, lng: -67.65},
+            {nombre: "AA07011", lat: -54.93, lng: -67.65},
+            {nombre: "AA09358", lat: -54.93, lng: -67.65},
+            {nombre: "AA07345", lat: -54.93, lng: -67.65},
+            ];
+
+            puntos.forEach(function(ave) {
+            L.marker([ave.lat, ave.lng])
+            .addTo(map)
+            .bindPopup(ave.nombre);
+
+            L.marker([-54.93, -67.65])
+            .addTo(map)
+            .bindTooltip("Isla Navarino, Chile — Punto de partida")
+            .openTooltip();
+
+                })
+
+        const ruta = [
+            { nombre: "Isla Navarino", lat: -54.93, lng: -67.65 },
+            { nombre: "Norte por los Andes", lat: -51.06, lng: -72.15 },
+            { nombre: "Pampas Argentina - ida", lat: -37.13, lng: -67.08 },
+            { nombre: "Caatinga", lat: -5.73, lng: -39.86 },
+            { nombre: "Mato Grosso. Hacia el centro de Brasil", lat: -12.63, lng: -61.23 },
+            { nombre: "Chaco, Paraguay", lat: -22.22, lng: -65.19 },
+            { nombre: "Pampas/Andes - vuelta", lat: -38.13, lng: -65.08 },
+            { nombre: "Isla Navarino", lat: -54.93, lng: -67.65 },
+            ];
+
+            ruta.forEach(function(punto) {
+            L.marker([punto.lat, punto.lng])
+             .addTo(map)
+             .bindTooltip(punto.nombre);
+
+        const ida = [
+            [-54.93, -67.65],
+            [-51.06, -72.15],
+            [-37.13, -67.08],
+            [-5.73, -39.86],
+            [-12.63, -61.23]
+        ];
+
+        const vuelta = [
+            [-12.63, -61.23],
+            [-22.22, -65.19],
+            [-38.13, -65.08],
+            [-54.93, -67.65]
+        ];
+
+            L.polyline(ida, { color: 'orange' }).addTo(map);
+            L.polyline(vuelta, { color: 'blue' }).addTo(map);
+        });
+
+
+    </script>
+    </body>
+</html>
