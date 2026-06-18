@@ -2,7 +2,7 @@
 Desarrollo del examen final del curso.
 
 - - - - -
-##PRIMER PASO:
+## PRIMER PASO:
 
 ### Para quién:
 #### Mainstream
