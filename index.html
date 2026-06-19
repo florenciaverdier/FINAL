@@ -16,19 +16,43 @@
             }
 
             :root {
-                --texto: #000;
-                --fondo: #eee;
+                --texto: #654723;
+                --fondo: #dfcdc1;
                 --blanco: #fff;
                 --fuente: "Inconsolata", monospace;
                 --otrafuente: "Roboto", sans-serif;
             }
 
+            html{
+                margin: 0;
+                padding:0;
+                background:white;
+            }
+
+             header{
+                width: 100%;
+                background: var(--blanco);
+                margin-top: 0;
+            }
+
+            nav ul {
+                display: flex;
+                justify-content: center;
+                gap: 2rem;
+                list-style: none;
+                padding: 1rem 0;
+                border: none;
+            }
+
+            nav a {
+                text-decoration: none;
+                color: var(--texto);
+                font-weight: bold;
+            }
+
             body {
                 font-family: var(--fuente);
                 background: var(--fondo);
-            }
-            svg#escondido {
-                display: none;
             }
 
             div#contenedor {
@@ -44,16 +68,27 @@
                 font-family: var(--otrafuente);
                 text-align: center;
                 font-size: calc(1rem + 2vw + 2vh);
-                margin: 3vw auto;
-                padding-left:calc(2rem + 2vw + 2vh);
                 background: url('');
                 background-repeat: no-repeat;
                 background-size:calc(1.5rem + 2vw + 2vh);
+                padding-bottom: 2rem;
+
             }
 
-             h2{
+            h2 {
                 font-family: var(--otrafuente);
                 margin:3rem 0 1rem 0;
+            }
+
+            h3 {
+                font-family: var(--otrafuente);
+                margin:2rem 0 1rem 0;
+                text-align: center;
+            }
+
+            p {
+                font-family: var(--fuente);
+                padding-bottom: 1rem;
             }
 
             ol,
@@ -95,16 +130,26 @@
                 margin-left: 1rem;
             }
 
-
-
-            .tiny {
-                width:2rem;
-                height: auto;
-                border-radius: 50% 50%;
-                margin-right: 0.5rem;
+            #map {
+                height: 500px; 
+                display: none;
+                margin:2rem 0 1rem 0;
             }
 
-            #map { height: 500px; }
+            div#footer{
+                width: 100%;
+                margin-top: 1rem auto;
+                background: var(--blanco);
+            }
+
+            footer {
+                text-align: center;
+                padding: 1rem;
+                margin-top: 2rem;
+                border-top: 1px solid silver;
+                font-size: 0.8rem;
+                color: #000;
+            }
             
         </style>
 
@@ -115,92 +160,189 @@
     </head>
 
     <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Aves de Chile</a></li>
+                    <li><a href="#migratorias">Migratorias</a></li>
+                    <li><a href="#fío-fío">El Fío-Fío</a></li>
+                </ul>
+            </nav>
+            <h1>Aves migratorias y el Fío Fío chileno</h1>
+        </header>
+
         <div id="contenedor">
-          <h1>El Fío Fío chileno</h1>
-           <ol id="uno"> </ol>
+            
+            <p> En nuestro país tenemos una gran biodiversidad. Y las aves no son una excepción. Gran parte de ellas miran cada año a diversos lugares del mundo.....</p>
+
+            <h2>Aves migratorias de Chile</h2>
+            <p>Busca en el selector al Fío-Fío, y descubre su historia que tiene oculta...</p>
+            <ol id="lista-migratorias"></ol>
+
+            <div class="filtro-wrapper">
+               <label for="filtro-especie">Mostrar aves migratorias:</label>
+                <select id="filtro-especie">
+                    <option value="">— Selecciona —</option>
+                </select>
+            </div>
+            <div id="resultado"></div>
+            <div id="map"></div>
+
         </div>
 
-      <div id="map"></div>
+    
 
-      <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-     crossorigin=""></script>
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+         crossorigin=""></script>
 
-     <script>
-        var map = L.map('map').setView([-54.93, -67.65], 10);
+         <script>
+                let todasLasAves = [];
+                const select = document.getElementById("filtro-especie");
 
-            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            }).addTo(map);
+                fetch("https://api.myjson.online/v1/records/b4cc6491-a885-4cf0-8760-c06ccd90e3ce")
+                    .then((respuesta) => {
+                        if (!respuesta.ok) {
+                            throw new Error("Error HTTP: " + respuesta.status);
+                        }
+                        return respuesta.json();
+                    })
+                       .then((datos) => {
+                            todasLasAves = datos.data;
 
-        var puntos = [ 
-            // Ejemplo de Claude:{nombre: "Individuo 1", lat: -33.45, lng: -70.66} 
+                            const migratorias = todasLasAves.filter(x => x.info.migration.value === "Sí");
 
-            {nombre: "AA04176", lat: -54.93, lng: -67.65},
-            {nombre: "AA04174", lat: -54.93, lng: -67.65 },
-            {nombre: "AA02968", lat: -54.93, lng: -67.65},
-            {nombre: "A03511", lat: -54.93, lng: -67.65},
-            {nombre: "AA04464", lat: -54.93, lng: -67.65},
-            {nombre: "AA04449", lat: -54.93, lng: -67.65},
-            {nombre: "AA06147", lat: -54.93, lng: -67.65},
-            {nombre: "AA04484", lat: -54.93, lng: -67.65},
-            {nombre: "AA06233", lat: -54.93, lng: -67.65},
-            {nombre: "AA06462", lat: -54.93, lng: -67.65},
-            {nombre: "AA06493", lat: -54.93, lng: -67.65},
-            {nombre: "AA07003", lat: -54.93, lng: -67.65},
-            {nombre: "AA07011", lat: -54.93, lng: -67.65},
-            {nombre: "AA09358", lat: -54.93, lng: -67.65},
-            {nombre: "AA07345", lat: -54.93, lng: -67.65},
+                            migratorias.forEach((ave) => {
+                                const option = document.createElement("option");
+                                option.value = ave.names.spanish;
+                                option.textContent = ave.names.spanish;
+                                select.appendChild(option);
+                            });
+                        })
+
+                    .catch((error) => {
+                        console.error("Algo salió mal:", error);
+                    });
+
+                    function renderizarAves(nombreSeleccionado) {
+                        const resultado = document.getElementById("resultado");
+                        resultado.innerHTML = "";
+                          document.getElementById("map").style.display = "none";
+
+                        if (!nombreSeleccionado) return;
+
+                        const ave = todasLasAves.find(x => x.names.spanish === nombreSeleccionado);
+
+                        if (nombreSeleccionado === "Fío-Fío") {
+                            resultado.innerHTML += `
+                            <h2>${ave.names.spanish}</h2>
+                            <h3>Sobre el ave</h3>
+                            <p>Fío Fío o científicamente llamado ?Elaenia albiceps' es un ave pequeña ágil, de las cuales tiene 6 subespecies. Dos de estas las encontramos en Chile, desde la región de Atacama, hasta Tierra del Fuego.</p>
+                            <img src="https://avesenchile.cl/wp-content/uploads/2022/03/fio-fio-001.jpg" alt="Imagen" width="300">
+                            <h3>Características generales</h3>
+                            <p>...</p>
+                            <h3>Canto</h3>
+                            <p>...</p>
+                            <h3>Migración & Mapa</h3>
+                            <p>Un estudio realizado por ..... En el mapa podemos ver una simulación del estudio mencionado y la ruta del Fío-Fío, registrada por los mismos. </p>
+                            <p>Si quieres revisar el estudio más en detalle, te dejo el link del paper <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0299954" target="_blank">aquí.</a></p>
+
+                        `;
+                        document.getElementById("map").style.display = "block";
+                        map.invalidateSize();
+                    } else {
+                        resultado.innerHTML += `<h2>${ave.names.spanish}</h2>`;
+                        }
+                        
+                    }
+
+                select.addEventListener("change", function () {
+                    renderizarAves(this.value);
+                });
+        </script>
+
+         <script>
+            var map = L.map('map').setView([-54.93, -67.65], 10);
+
+                L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                }).addTo(map);
+
+            var puntos = [ 
+                // Ejemplo de Claude:{nombre: "Individuo 1", lat: -33.45, lng: -70.66} 
+
+                {nombre: "AA04176", lat: -54.93, lng: -67.65},
+                {nombre: "AA04174", lat: -54.93, lng: -67.65 },
+                {nombre: "AA02968", lat: -54.93, lng: -67.65},
+                {nombre: "A03511", lat: -54.93, lng: -67.65},
+                {nombre: "AA04464", lat: -54.93, lng: -67.65},
+                {nombre: "AA04449", lat: -54.93, lng: -67.65},
+                {nombre: "AA06147", lat: -54.93, lng: -67.65},
+                {nombre: "AA04484", lat: -54.93, lng: -67.65},
+                {nombre: "AA06233", lat: -54.93, lng: -67.65},
+                {nombre: "AA06462", lat: -54.93, lng: -67.65},
+                {nombre: "AA06493", lat: -54.93, lng: -67.65},
+                {nombre: "AA07003", lat: -54.93, lng: -67.65},
+                {nombre: "AA07011", lat: -54.93, lng: -67.65},
+                {nombre: "AA09358", lat: -54.93, lng: -67.65},
+                {nombre: "AA07345", lat: -54.93, lng: -67.65},
+                ];
+
+                puntos.forEach(function(ave) {
+                L.marker([ave.lat, ave.lng])
+                .addTo(map)
+                .bindPopup(ave.nombre);
+
+                L.marker([-54.93, -67.65])
+                .addTo(map)
+                .bindTooltip("Isla Navarino, Chile — Punto de partida")
+                .openTooltip();
+
+                    })
+
+            const ruta = [
+                { nombre: "Isla Navarino", lat: -54.93, lng: -67.65 },
+                { nombre: "Norte por los Andes", lat: -51.06, lng: -72.15 },
+                { nombre: "Pampas Argentina - ida", lat: -37.13, lng: -67.08 },
+                { nombre: "Caatinga", lat: -5.73, lng: -39.86 },
+                { nombre: "Mato Grosso. Hacia el centro de Brasil", lat: -12.63, lng: -61.23 },
+                { nombre: "Chaco, Paraguay", lat: -22.22, lng: -65.19 },
+                { nombre: "Pampas/Andes - vuelta", lat: -38.13, lng: -65.08 },
+                { nombre: "Isla Navarino", lat: -54.93, lng: -67.65 },
+                ];
+
+                ruta.forEach(function(punto) {
+                L.marker([punto.lat, punto.lng])
+                 .addTo(map)
+                 .bindTooltip(punto.nombre);
+
+            const ida = [
+                [-54.93, -67.65],
+                [-51.06, -72.15],
+                [-37.13, -67.08],
+                [-5.73, -39.86],
+                [-12.63, -61.23]
             ];
 
-            puntos.forEach(function(ave) {
-            L.marker([ave.lat, ave.lng])
-            .addTo(map)
-            .bindPopup(ave.nombre);
-
-            L.marker([-54.93, -67.65])
-            .addTo(map)
-            .bindTooltip("Isla Navarino, Chile — Punto de partida")
-            .openTooltip();
-
-                })
-
-        const ruta = [
-            { nombre: "Isla Navarino", lat: -54.93, lng: -67.65 },
-            { nombre: "Norte por los Andes", lat: -51.06, lng: -72.15 },
-            { nombre: "Pampas Argentina - ida", lat: -37.13, lng: -67.08 },
-            { nombre: "Caatinga", lat: -5.73, lng: -39.86 },
-            { nombre: "Mato Grosso. Hacia el centro de Brasil", lat: -12.63, lng: -61.23 },
-            { nombre: "Chaco, Paraguay", lat: -22.22, lng: -65.19 },
-            { nombre: "Pampas/Andes - vuelta", lat: -38.13, lng: -65.08 },
-            { nombre: "Isla Navarino", lat: -54.93, lng: -67.65 },
+            const vuelta = [
+                [-12.63, -61.23],
+                [-22.22, -65.19],
+                [-38.13, -65.08],
+                [-54.93, -67.65]
             ];
 
-            ruta.forEach(function(punto) {
-            L.marker([punto.lat, punto.lng])
-             .addTo(map)
-             .bindTooltip(punto.nombre);
-
-        const ida = [
-            [-54.93, -67.65],
-            [-51.06, -72.15],
-            [-37.13, -67.08],
-            [-5.73, -39.86],
-            [-12.63, -61.23]
-        ];
-
-        const vuelta = [
-            [-12.63, -61.23],
-            [-22.22, -65.19],
-            [-38.13, -65.08],
-            [-54.93, -67.65]
-        ];
-
-            L.polyline(ida, { color: 'orange' }).addTo(map);
-            L.polyline(vuelta, { color: 'blue' }).addTo(map);
-        });
+                L.polyline(ida, { color: 'orange' }).addTo(map);
+                L.polyline(vuelta, { color: 'blue' }).addTo(map);
+            });
 
 
-    </script>
+        </script>
+
+        <div id="footer">
+            <footer>
+                <p>Trabajo final — Desarrollo Web y Diseño de Información 2026</p>
+                <p>Florencia María Verdier Fernández</p>
+            </footer>
+        </div>
     </body>
 </html>
