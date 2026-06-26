@@ -153,7 +153,7 @@
 
   /* ── LAYOUT ── */
   .article {
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 5vw 80px;
   }
@@ -238,23 +238,25 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1px;
-    background: var(--rule);
     margin: 48px 0;
-    border: 1px solid var(--rule);
+    background: var(--rule);
+  border: 1px solid var(--rule);  
   }
+  
   .stat-cell {
-    background: var(--white);
-    padding: 28px 24px;
-    text-align: center;
-  }
-  .stat-num {
-    font-family: 'Playwrite HR Lijeva', Georgia, serif;
-    font-size: 2.8rem;
-    font-weight: 600;
-    color: var(--olive);
-    line-height: 1;
-    display: block;
-  }
+  background: var(--paper);  /* antes: var(--white) */
+  padding: 28px 24px;
+  text-align: center;
+}
+.stat-num {
+  font-family: 'Playwrite HR Lijeva', Georgia, serif;
+  font-size: clamp(1.6rem, 3.5vw, 2.8rem); /* antes era fijo 2.8rem */
+  font-weight: 600;
+  color: var(--olive);
+  line-height: 1.1;
+  display: block;
+  word-break: break-word;
+}
   .stat-unit {
     font-family: 'Mulish', monospace;
     font-size: 11px;
@@ -356,7 +358,7 @@
   /* FIX #3: estilos para la imagen bajo la ficha */
   .ficha-img {
     width: 100%;
-    max-height: 520px;
+    max-height: 600px;
     height: auto;
     display: block;
     margin-top: 20px;
@@ -370,6 +372,7 @@
     margin: 44px 0;
     overflow: hidden;
     border: 1px solid var(--rule);
+    background: var(--white);
   }
   .habitat-item {
     flex: 1;
@@ -476,39 +479,6 @@
   }
   .map-citation a:hover { text-decoration: underline; }
 
-  /* ── NESTING INFO ── */
-  .nest-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    margin: 32px 0;
-  }
-  .nest-item {
-    border-top: 2px solid var(--olive);
-    padding-top: 16px;
-  }
-  .nest-number {
-    font-family: 'Playwrite HR Lijeva', Georgia, serif;
-    font-size: 2.2rem;
-    font-weight: 700;
-    color: var(--olive);
-    display: block;
-    line-height: 1;
-  }
-  .nest-label {
-    font-family: 'Mulish', monospace;
-    font-size: 10px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--ash);
-    display: block;
-    margin: 4px 0 8px;
-  }
-  .nest-desc {
-    font-size: 13px;
-    color: #555;
-    line-height: 1.45;
-  }
 
   /* ── TAXONOMY NOTE ── */
   .taxon-note {
@@ -635,29 +605,37 @@
        FIX #2: ya no hay grid de 2 columnas; el texto ocupa todo el ancho. -->
   <div id="intro" class="intro-block fade-up">
     <div class="intro-lead">
-      <p class="drop-cap">El fiofío crestiblanco (<em>Elaenia albiceps</em>) es una de las aves más abundantes y emblemáticas del cono sur de América. Pertenece al orden de los paseriformes —un término científico que significa literalmente «los que tienen forma de gorrión»— y forma parte de la familia Tyrannidae.</p>
+      <p class="drop-cap">El fiofío crestiblanco es una de las aves más abundantes y emblemáticas del cono sur de América. Su nombre científico “Elaenia albiceps” es una mezcla de latín y griego que significa oliváceo de cresta blanca." Pertenece al orden de los paseriformes —un término científico que significa literalmente «los que tienen forma de gorrión»— y forma parte de la familia Tyrannidae.</p>
       <p style="margin-top:1em;">Aunque es un ave pequeña y a veces difícil de ver a simple vista porque le gusta andar escondida entre el follaje, su canto característico, un monosílabo algo triste que suena exactamente como un «fio-fio», lo delata de inmediato.</p>
     </div>
   </div>
 
-  <!-- STAT STRIP -->
-  <div class="stat-strip fade-up">
-    <div class="stat-cell">
-      <span class="stat-num">15</span>
-      <span class="stat-unit">cm de largo</span>
-      <p class="stat-desc">Tamaño reducido que lo hace difícil de divisar entre el follaje</p>
+
+<!-- CONTEXTUALIZACIÓN NINJAS -->
+<div id="contexto-ninjas" class="fade-up" style="margin: 44px 0;">
+  <div style="background: var(--ink); color: var(--white); padding: 32px 36px;">
+    <span style="font-family:'Mulish',monospace; font-size:9px; letter-spacing:0.25em; text-transform:uppercase; color:var(--amber-light); margin-bottom:14px; display:block;">
+      El Fío-Fío en contexto · Aves de Chile
+    </span>
+    <div id="ninja-stats" style="display:grid; grid-template-columns: repeat(3,1fr); gap:24px; margin-top:8px;">
+      <div style="text-align:center;">
+        <span id="total-aves" style="font-family:'Playwrite HR Lijeva',serif; font-size:2.8rem; color:var(--amber-light); display:block; line-height:1;">–</span>
+        <span style="font-family:'Mulish',monospace; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:var(--ash-light); display:block; margin-top:6px;">aves nativas de Chile</span>
+      </div>
+      <div style="text-align:center;">
+        <span id="total-paseriformes" style="font-family:'Playwrite HR Lijeva',serif; font-size:2.8rem; color:var(--amber-light); display:block; line-height:1;">–</span>
+        <span style="font-family:'Mulish',monospace; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:var(--ash-light); display:block; margin-top:6px;">realizan migraciones estacionales</span>
+      </div>
+      <div style="text-align:center;">
+        <span id="total-patagonia" style="font-family:'Playwrite HR Lijeva',serif; font-size:2.8rem; color:var(--amber-light); display:block; line-height:1;">–</span>
+        <span style="font-family:'Mulish',monospace; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:var(--ash-light); display:block; margin-top:6px;">son Passeriformes</span>
+      </div>
     </div>
-    <div class="stat-cell">
-      <span class="stat-num">12–25</span>
-      <span class="stat-unit">gramos</span>
-      <p class="stat-desc">A pesar de su ligereza, emprende migraciones de miles de kilómetros</p>
-    </div>
-    <div class="stat-cell">
-      <span class="stat-num">LC</span>
-      <span class="stat-unit">Preocupación Menor</span>
-      <p class="stat-desc">Estado de conservación según la IUCN. Población estable y ampliamente distribuida</p>
-    </div>
+    <p id="ninja-texto" style="margin-top:24px; font-size:14px; color:rgba(255,255,255,0.7); line-height:1.6; border-top:1px solid rgba(255,255,255,0.1); padding-top:16px;">
+      Cargando datos…
+    </p>
   </div>
+</div>
 
   <!-- IDENTIFICACIÓN -->
   <div id="reconocerlo" class="section-break fade-up">
@@ -669,6 +647,53 @@
     <p>Es un ave de tamaño pequeño con un característico color gris ceniza con tintes oliváceos en su dorso. Lo más distintivo es su cabeza cenicienta con plumas alargadas en la corona que forman un pequeño copete, el cual esconde una mancha central blanquecina.</p>
     <p>Su abdomen es blanquecino, y sus alas negruzcas muestran dos bandas transversales blancas muy notorias. Tanto el pico como las patas son de un color negruzco.</p>
     <p>Esta combinación de colores apagados y silueta discreta es en realidad una ventaja evolutiva: el fiofío se mueve con confianza entre arbustos y copas de árboles sin llamar la atención de depredadores.</p>
+  </div>
+
+  
+  <!-- FICHA TÉCNICA -->
+  <div id="ficha-tecnica" class="section-break fade-up">
+    <span class="section-break-label">Ficha técnica</span>
+    <span class="section-break-rule"></span>
+  </div>
+
+  <div class="data-table-wrap fade-up">
+    <table>
+      <thead>
+        <tr>
+          <th>Característica</th>
+          <th>Detalle</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Nombre científico</td>
+          <td><em>Elaenia albiceps</em> · Subespecie local: ssp. <em>chilensis</em></td>
+        </tr>
+        <tr>
+          <td>Nombres locales</td>
+          <td>Fio-fio, chiflador, huiro, silbador, fiofio silbón (Arg), fiofio común (Bol), viudita chilena (Uru)</td>
+        </tr>
+        <tr>
+          <td>Tamaño y peso</td>
+          <td>Largo aproximado de 15 cm; peso entre 12 y 25 gramos</td>
+        </tr>
+        <tr>
+         <tr>
+  <td>Estado de conservación</td>
+  <td>Preocupación Menor (LC) según la IUCN. Su población es estable y ampliamente distribuida, aunque podría verse afectada en el futuro por la contaminación, el relleno de humedales, la destrucción de hábitat y el ataque de animales exóticos invasivos y gatos domésticos.</td>
+</tr>
+      </tbody>
+    </table>
+
+<!-- NOTA TAXONÓMICA -->
+  <div class="taxon-note fade-up">
+    <span class="taxon-note-label">⚠ Nota taxonómica · Debate científico en curso</span>
+    <p>La clasificación del fiofío genera debate entre los expertos. Mientras que algunos organismos como la SACC lo mantienen clasificado como una subespecie (<em>Elaenia albiceps chilensis</em>), otros autores y plataformas especializadas —como Xeno-Canto y Zoonomen— proponen elevarlo al rango de especie independiente (<em>Elaenia chilensis</em>). La discusión continúa abierta en la comunidad ornitológica.</p>
+<p style="margin-top:10px;">Existen dos razas reconocidas: la subespecie <em>modesta</em>, que habita en los oasis y valles del extremo norte de Chile y se distingue por una cresta más marcada y alas con bandas tenues; y la subespecie <em>chilensis</em>, la más común de observar, con una cresta más pequeña y bandas alares más pronunciadas.</p>
+  </div>
+
+    <!-- FIX #3: extensión corregida a .png y estilos aplicados con clase -->
+    <img src="fiofio2.jpg" alt="Fiofío crestiblanco" class="ficha-img" >
   </div>
 
   <!-- CANTOS — FIX #4: ambos audios con el mismo estilo oscuro (amber-light, fondo semitransparente) -->
@@ -703,48 +728,7 @@
     </div>
   </div>
 
-  <!-- FICHA TÉCNICA -->
-  <div id="ficha-tecnica" class="section-break fade-up">
-    <span class="section-break-label">Ficha técnica</span>
-    <span class="section-break-rule"></span>
-  </div>
 
-  <div class="data-table-wrap fade-up">
-    <table>
-      <thead>
-        <tr>
-          <th>Característica</th>
-          <th>Detalle</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Nombre científico</td>
-          <td><em>Elaenia albiceps</em> · Subespecie local: ssp. <em>chilensis</em></td>
-        </tr>
-        <tr>
-          <td>Nombres locales</td>
-          <td>Fio-fio, chiflador, huiro, silbador, fiofio silbón (Arg), fiofio común (Bol), viudita chilena (Uru)</td>
-        </tr>
-        <tr>
-          <td>Tamaño y peso</td>
-          <td>Largo aproximado de 15 cm; peso entre 12 y 25 gramos</td>
-        </tr>
-        <tr>
-          <td>Estado de conservación</td>
-          <td>Preocupación Menor (LC) según la IUCN</td>
-        </tr>
-      </tbody>
-    </table>
-    <!-- FIX #3: extensión corregida a .png y estilos aplicados con clase -->
-    <img src="fiofio2.jpg" alt="Fiofío crestiblanco" class="ficha-img" viewBox >
-  </div>
-
-  <!-- NOTA TAXONÓMICA -->
-  <div class="taxon-note fade-up">
-    <span class="taxon-note-label">⚠ Nota taxonómica · Debate científico en curso</span>
-    <p>La clasificación del fiofío genera debate entre los expertos. Mientras que algunos organismos como la SACC lo mantienen clasificado como una subespecie (<em>Elaenia albiceps chilensis</em>), otros autores y plataformas especializadas —como Xeno-Canto y Zoonomen— proponen elevarlo al rango de especie independiente (<em>Elaenia chilensis</em>). La discusión continúa abierta en la comunidad ornitológica.</p>
-  </div>
 
   <!-- HABITAT -->
   <div id="habitat" class="section-break fade-up">
@@ -818,21 +802,21 @@
 
   <p class="fade-up" style="margin-bottom:28px;">Su periodo de nidificación ocurre normalmente entre noviembre y enero. Construye un nido tipo taza utilizando pasto, musgo y líquenes, forrado con plumas o cardos.</p>
 
-  <div class="nest-grid fade-up">
-    <div class="nest-item">
-      <span class="nest-number">Nov–Ene</span>
-      <span class="nest-label">Período de cría</span>
-      <span class="nest-desc">Ventana reproductiva en el hemisferio sur, coincidiendo con el verano austral.</span>
+<div class="stat-strip fade-up">
+    <div class="stat-cell">
+      <span class="stat-num">Nov–Ene</span>
+      <span class="stat-unit">Período de cría</span>
+      <p class="stat-desc">Ventana reproductiva en el hemisferio sur, coincidiendo con el verano austral.</p>
     </div>
-    <div class="nest-item">
-      <span class="nest-number">2–3</span>
-      <span class="nest-label">Huevos por nidada</span>
-      <span class="nest-desc">Blancos con pintitas rojizas, incubados en el nido tipo taza construido con materiales naturales.</span>
+    <div class="stat-cell">
+      <span class="stat-num">2–3</span>
+      <span class="stat-unit">Huevos por nidada</span>
+      <p class="stat-desc">Blancos con pintitas rojizas, incubados en el nido tipo taza construido con materiales naturales.</p>
     </div>
-    <div class="nest-item">
-      <span class="nest-number">☁️🌿</span>
-      <span class="nest-label">Materiales del nido</span>
-      <span class="nest-desc">Pasto, musgo y líquenes entrecruzados, forrado con plumas o cardos para proteger las crías.</span>
+    <div class="stat-cell">
+      <span class="stat-num">☁️🌿</span>
+      <span class="stat-unit">Materiales del nido</span>
+      <p class="stat-desc">Pasto, musgo y líquenes entrecruzados, forrado con plumas o cardos para proteger las crías.</p>
     </div>
   </div>
 
@@ -888,6 +872,42 @@
 
   document.querySelectorAll('.fade-up').forEach(function(el) {
     observer.observe(el);
+  });
+
+// ── CONTEXTUALIZACIÓN NINJAS ──
+fetch('https://api.myjson.online/v1/records/b4cc6491-a885-4cf0-8760-c06ccd90e3ce')
+  .then(function(res) { return res.json(); })
+  .then(function(json) {
+    var aves = json.data;
+
+    var nativas = aves.filter(function(a) {
+      return a.info && a.info.species &&
+             a.info.species.value === 'Nativa';
+    }).length;
+
+    var migrantes = aves.filter(function(a) {
+      return a.info && a.info.migration &&
+             a.info.migration.value === 'Sí';
+    }).length;
+
+    var paseriformes = aves.filter(function(a) {
+      return a.info && a.info.order &&
+             a.info.order.value.toLowerCase().includes('passeriform');
+    }).length;
+
+    document.getElementById('total-aves').textContent = nativas;
+    document.getElementById('total-paseriformes').textContent = migrantes;
+    document.getElementById('total-patagonia').textContent = paseriformes;
+
+    document.getElementById('ninja-texto').textContent =
+      'El catálogo de aves de Chile registra ' + aves.length + ' especies. ' +
+      'De ellas, ' + nativas + ' son nativas del país. ' +
+      migrantes + ' realizan migraciones estacionales, como el Fío-Fío, que cada otoño emprende un viaje de miles de kilómetros hacia el norte de Sudamérica. ' +
+      'Y ' + paseriformes + ' pertenecen al orden Passeriformes — el mismo orden taxonómico al que pertenece el Fío-Fío.';
+  })
+  .catch(function() {
+    document.getElementById('ninja-texto').textContent =
+      'No se pudieron cargar los datos del catálogo.';
   });
 
   // ── MAPA ──
