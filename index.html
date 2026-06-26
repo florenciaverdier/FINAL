@@ -153,7 +153,7 @@
 
   /* ── LAYOUT ── */
   .article {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 0 5vw 80px;
   }
@@ -244,7 +244,7 @@
   }
   
   .stat-cell {
-  background: var(--paper);  /* antes: var(--white) */
+  background: var(--white);  /* antes: var(--white) */
   padding: 28px 24px;
   text-align: center;
 }
@@ -315,7 +315,7 @@
   /* ── DATA TABLE ── */
   .data-table-wrap {
     margin: 40px 0;
-    overflow-x: auto;
+    overflow-x: visible;
   }
   table {
     width: 100%;
@@ -355,16 +355,40 @@
     letter-spacing: 0.05em;
   }
 
-  /* FIX #3: estilos para la imagen bajo la ficha */
-  .ficha-img {
+.galeria{
+    margin-top: 50px;
     width: 100%;
-    max-height: 600px;
-    height: auto;
-    display: block;
-    margin-top: 20px;
-    border-radius: 2px;
+    margin-left: auto;
+
+    display: flex;
+    gap: 20px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+
+    padding-bottom: 20px;
+}
+
+.galeria img{
+    width: 500px;
+    height: 400px;
     object-fit: cover;
-  }
+    scroll-snap-align: start;
+}
+
+.galeria::-webkit-scrollbar {
+  height: 4px;
+}
+.galeria::-webkit-scrollbar-track {
+  background: transparent;
+}
+.galeria::-webkit-scrollbar-thumb {
+  background: var(--amber);
+  border-radius: 2px;
+}
 
   /* ── HABITAT VISUAL ── */
   .habitat-strip {
@@ -649,6 +673,16 @@
     <p>Esta combinación de colores apagados y silueta discreta es en realidad una ventaja evolutiva: el fiofío se mueve con confianza entre arbustos y copas de árboles sin llamar la atención de depredadores.</p>
   </div>
 
+  <div class="galeria">
+    <img src="fiofio2.jpg" alt="">
+    <img src="fiofio3.jpg" alt="">
+    <img src="fiofio4.jpg" alt="">
+    <img src="fiofio5.jpg" alt="">
+    <img src="fiofio6.jpg" alt="">
+    <img src="fiofio7.jpg" alt="">
+    <img src="fiofio8.jpg" alt="">
+</div>
+
   
   <!-- FICHA TÉCNICA -->
   <div id="ficha-tecnica" class="section-break fade-up">
@@ -685,15 +719,11 @@
       </tbody>
     </table>
 
-<!-- NOTA TAXONÓMICA -->
+    <!-- NOTA TAXONÓMICA -->
   <div class="taxon-note fade-up">
     <span class="taxon-note-label">⚠ Nota taxonómica · Debate científico en curso</span>
     <p>La clasificación del fiofío genera debate entre los expertos. Mientras que algunos organismos como la SACC lo mantienen clasificado como una subespecie (<em>Elaenia albiceps chilensis</em>), otros autores y plataformas especializadas —como Xeno-Canto y Zoonomen— proponen elevarlo al rango de especie independiente (<em>Elaenia chilensis</em>). La discusión continúa abierta en la comunidad ornitológica.</p>
 <p style="margin-top:10px;">Existen dos razas reconocidas: la subespecie <em>modesta</em>, que habita en los oasis y valles del extremo norte de Chile y se distingue por una cresta más marcada y alas con bandas tenues; y la subespecie <em>chilensis</em>, la más común de observar, con una cresta más pequeña y bandas alares más pronunciadas.</p>
-  </div>
-
-    <!-- FIX #3: extensión corregida a .png y estilos aplicados con clase -->
-    <img src="fiofio2.jpg" alt="Fiofío crestiblanco" class="ficha-img" >
   </div>
 
   <!-- CANTOS — FIX #4: ambos audios con el mismo estilo oscuro (amber-light, fondo semitransparente) -->
@@ -714,6 +744,7 @@
       </audio>
       <p class="audio-caption" style="color:rgba(255,255,255,0.5);">Vocalización típica: el «fio-fio» que le da nombre</p>
     </div>
+
     <!-- Audio 1 -->
     <div class="audio-block" style="background:rgba(255,255,255,0.08); border-left-color:var(--amber-light); margin-top:22px;">
       <span class="audio-label" style="color:var(--amber-light);">
@@ -726,8 +757,20 @@
       </audio>
       <p class="audio-caption" style="color:rgba(255,255,255,0.5);">Variante del llamado — grabación alternativa en terreno</p>
     </div>
-  </div>
 
+     <!-- AUDIO 3 -->
+  <div class="audio-block" style="background:rgba(255,255,255,0.08); border-left-color:var(--amber-light); margin-top:22px;">
+    <span class="audio-label" style="color:var(--amber-light);">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+      Grabación en periodo de cría
+    </span>
+    <audio controls preload="none">
+      <source src="https://www.avesdechile.cl/0son/son081hk.mp3" type="audio/mpeg">
+      Tu navegador no soporta audio.
+    </audio>
+    <p class="audio-caption">Vocalización registrada durante la temporada reproductiva; permite apreciar variaciones en el canto según contexto.</p>
+  </div>
+  </div>
 
 
   <!-- HABITAT -->
@@ -800,7 +843,20 @@
     <span class="section-break-rule"></span>
   </div>
 
-  <p class="fade-up" style="margin-bottom:28px;">Su periodo de nidificación ocurre normalmente entre noviembre y enero. Construye un nido tipo taza utilizando pasto, musgo y líquenes, forrado con plumas o cardos.</p>
+  <p class="fade-up" style="margin-bottom:28px;"><p class="fade-up" style="margin-bottom:28px;">
+  Al llegar la primavera austral, el fiofío no solo retorna a Chile: viene a reproducirse. 
+  Elige ramas densas de arbustos o árboles para construir su nido con una técnica precisa, 
+  entretejiendo pasto, musgo y líquenes, y forrándolo con plumas o cardos para amortiguar 
+  el frío de las noches sureñas. La hembra incuba sola, mientras el macho intensifica su 
+  canto para defender el territorio.</p>
+
+<div class="galeria">
+    <img src="huevos.jpg" alt="">
+    <img src="nido.jpg" alt="">
+    <img src="huevos2.jpg" alt="">
+    <img src="nido2.jpg" alt="">
+    <img src="huevos3.jpg" alt="">
+</div>
 
 <div class="stat-strip fade-up">
     <div class="stat-cell">
@@ -814,28 +870,17 @@
       <p class="stat-desc">Blancos con pintitas rojizas, incubados en el nido tipo taza construido con materiales naturales.</p>
     </div>
     <div class="stat-cell">
-      <span class="stat-num">☁️🌿</span>
+      <span class="stat-num">🪹🌿</span>
       <span class="stat-unit">Materiales del nido</span>
       <p class="stat-desc">Pasto, musgo y líquenes entrecruzados, forrado con plumas o cardos para proteger las crías.</p>
     </div>
   </div>
 
-  <!-- AUDIO 3 -->
-  <div class="audio-block fade-up" style="margin:36px 0;">
-    <span class="audio-label">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
-      Grabación en periodo de cría
-    </span>
-    <audio controls preload="none">
-      <source src="https://www.avesdechile.cl/0son/son081hk.mp3" type="audio/mpeg">
-      Tu navegador no soporta audio.
-    </audio>
-    <p class="audio-caption">Vocalización registrada durante la temporada reproductiva; permite apreciar variaciones en el canto según contexto.</p>
-  </div>
 
   <!-- SOURCES — FIX #5: estudio agregado -->
   <div class="sources fade-up">
     <span class="sources-label">Fuentes</span>
+     <a href="https://aves.ninjas.cl/" target="_blank" rel="noopener">aves.ninjas.cl - Datos Aves de Chile</a>
     <a href="https://www.avesdechile.cl/081.htm" target="_blank" rel="noopener">avesdechile.cl — Ficha Elaenia albiceps</a>
     <a href="https://es.wikipedia.org/wiki/Elaenia_albiceps" target="_blank" rel="noopener">Wikipedia — Elaenia albiceps</a>
     <a href="https://es.wikipedia.org/wiki/Passeriformes" target="_blank" rel="noopener">Wikipedia — Passeriformes</a>
@@ -847,7 +892,7 @@
 
 <!-- FIX #5: estudio agregado al footer -->
 <footer>
-  Infografía basada en fuentes de libre acceso &nbsp;·&nbsp; Aves de Chile &nbsp;·&nbsp; Wikipedia
+  Infografía basada en fuentes de libre acceso &nbsp;·&nbsp; Ninjas.cl &nbsp;·&nbsp; Aves de Chile &nbsp;·&nbsp; Wikipedia
   <br>
   Datos migratorios: Jara, Jiménez &amp; Rozzi (2024) PLOS ONE
 </footer>
@@ -855,7 +900,7 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
   integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
   crossorigin=""></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-polylinedecorator/1.6.0/leaflet.polylineDecorator.min.js"></script>
+<script src="https://unpkg.com/leaflet-polylinedecorator@1.6.0/dist/leaflet.polylineDecorator.js"></script>
 
 <script>
   // ── OBSERVER PRIMERO (independiente del mapa) ──
@@ -911,7 +956,7 @@ fetch('https://api.myjson.online/v1/records/b4cc6491-a885-4cf0-8760-c06ccd90e3ce
   });
 
   // ── MAPA ──
-  var map = L.map('map', { attributionControl: false }).setView([-25, -65], 3);
+  var map = L.map('map', { attributionControl: false }).setView([-33.4375, -70.65], 3);
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
   var puntos = [
@@ -973,26 +1018,30 @@ fetch('https://api.myjson.online/v1/records/b4cc6491-a885-4cf0-8760-c06ccd90e3ce
   var lineaIda    = L.polyline(coordinadasIda,    { color: '#b89a3a', weight: 3, opacity: 0.9 }).addTo(map);
   var lineaVuelta = L.polyline(coordinadasVuelta, { color: '#7a5228', weight: 3, opacity: 0.9 }).addTo(map);
 
-// ── FLECHAS INTEGRADAS AL SVG ──
-map.whenReady(function() {
-  setTimeout(function() {
-    var svgEl = document.querySelector('.leaflet-overlay-pane svg');
-    if (!svgEl) return;
+// ── FLECHAS ──
+L.polylineDecorator(lineaIda, {
+  patterns: [{
+    offset: '10%', repeat: '15%',
+    symbol: L.Symbol.arrowHead({
+      pixelSize: 14,
+      headAngle: 40,
+      polygon: true,
+      pathOptions: { fillOpacity: 1, weight: 0, color: '#b89a3a' }
+    })
+  }]
+}).addTo(map);
 
-    var defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
-    defs.innerHTML =
-      '<marker id="flecha-ida" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto" markerUnits="strokeWidth">' +
-        '<path d="M0,0 L0,5 L5,2.5 z" fill="#b89a3a"/>' +
-      '</marker>' +
-      '<marker id="flecha-vuelta" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto" markerUnits="strokeWidth">' +
-        '<path d="M0,0 L0,5 L5,2.5 z" fill="#7a5228"/>' +
-      '</marker>';
-    svgEl.insertBefore(defs, svgEl.firstChild);
-
-    if (lineaIda._path)    lineaIda._path.setAttribute('marker-mid', 'url(#flecha-ida)');
-    if (lineaVuelta._path) lineaVuelta._path.setAttribute('marker-mid', 'url(#flecha-vuelta)');
-  }, 100);
-});
+L.polylineDecorator(lineaVuelta, {
+  patterns: [{
+    offset: '10%', repeat: '20%',
+    symbol: L.Symbol.arrowHead({
+      pixelSize: 14,
+      headAngle: 40,
+      polygon: true,
+      pathOptions: { fillOpacity: 1, weight: 0, color: '#7a5228' }
+    })
+  }]
+}).addTo(map);
 </script>
 </body>
 </html>
