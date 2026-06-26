@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fiofío: Un Viajero Incansable</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Playwrite+HR+Lijeva:wght@100..400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
   integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
   crossorigin=""/>
@@ -12,11 +12,11 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --ink: #1a1a1a;
+    --ink: #241508;
     --paper: #f7f4ee;
-    --olive: #5a6e3a;
+    --olive: #7a5228;
     --olive-light: #8a9e5a;
-    --olive-pale: #e8eede;
+    --olive-pale: #fdf8ef;
     --amber: #c98a2f;
     --amber-light: #f0c86a;
     --ash: #8a8c88;
@@ -44,7 +44,7 @@
     gap: 1.8rem;
     list-style: none;
     padding: 0.9rem 1.5rem;
-    background: rgba(10, 15, 7, 0.65);
+    background: rgba(26, 14, 5, 0.5);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -55,7 +55,7 @@
     text-decoration: none;
     color: rgba(255, 255, 255, 0.85);
     font-weight: 600;
-    font-family: 'Space Mono', monospace;
+    font-family: 'Mulish', monospace;
     font-size: 10px;
     letter-spacing: 0.14em;
     text-transform: uppercase;
@@ -67,7 +67,7 @@
   }
 
   body {
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'Mulish', sans-serif;
     background: var(--paper);
     color: var(--ink);
     font-size: 17px;
@@ -111,7 +111,7 @@
   }
 
   .hero-eyebrow {
-    font-family: 'Space Mono', monospace;
+    font-family: 'Mulish', monospace;
     font-size: 11px;
     letter-spacing: 0.22em;
     text-transform: uppercase;
@@ -129,9 +129,9 @@
   }
 
   .hero-title {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: 'Playwrite HR Lijeva', Georgia, serif;
     font-size: clamp(2.6rem, 6vw, 5rem);
-    font-weight: 900;
+    font-weight: 550;
     color: var(--white);
     line-height: 1.08;
     margin-bottom: 12px;
@@ -166,7 +166,7 @@
     margin: 52px 0 32px;
   }
   .section-break-label {
-    font-family: 'Space Mono', monospace;
+    font-family: 'Mulish', monospace;
     font-size: 10px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -189,9 +189,9 @@
     padding: 32px 0;   /* sin padding derecho ni border-right */
   }
   .drop-cap::first-letter {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: 'Playwrite HR Lijeva', Georgia, serif;
     font-size: 4.4em;
-    font-weight: 900;
+    font-weight: 550;
     float: left;
     line-height: 0.78;
     margin-right: 0.08em;
@@ -202,18 +202,18 @@
 
   /* ── AUDIO PLAYER ── */
   .audio-block {
-    background: var(--olive-pale);
+    background: #241508 ;
     border-left: 3px solid var(--olive);
     padding: 20px 24px;
     margin: 28px 0;
     border-radius: 0 4px 4px 0;
   }
   .audio-label {
-    font-family: 'Space Mono', monospace;
+    font-family: 'Mulish', monospace;
     font-size: 10px;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--olive);
+    color: var(--amber-light);
     margin-bottom: 10px;
     display: flex;
     align-items: center;
@@ -248,15 +248,15 @@
     text-align: center;
   }
   .stat-num {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: 'Playwrite HR Lijeva', Georgia, serif;
     font-size: 2.8rem;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--olive);
     line-height: 1;
     display: block;
   }
   .stat-unit {
-    font-family: 'Space Mono', monospace;
+    font-family: 'Mulish', monospace;
     font-size: 11px;
     color: var(--ash);
     letter-spacing: 0.1em;
@@ -289,7 +289,7 @@
     position: relative;
   }
   .field-note-tag {
-    font-family: 'Space Mono', monospace;
+    font-family: 'Mulish', monospace;
     font-size: 9px;
     letter-spacing: 0.25em;
     text-transform: uppercase;
@@ -298,7 +298,7 @@
     display: block;
   }
   .field-note blockquote {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: 'Playwrite HR Lijeva', Georgia, serif;
     font-size: 1.4rem;
     font-style: italic;
     line-height: 1.5;
@@ -325,7 +325,7 @@
     color: var(--white);
   }
   thead th {
-    font-family: 'Space Mono', monospace;
+    font-family: 'Mulish', monospace;
     font-size: 10px;
     letter-spacing: 0.16em;
     text-transform: uppercase;
@@ -348,7 +348,7 @@
     color: var(--olive);
     width: 30%;
     font-size: 13px;
-    font-family: 'Space Mono', monospace;
+    font-family: 'Mulish', monospace;
     text-transform: uppercase;
     letter-spacing: 0.05em;
   }
@@ -356,6 +356,7 @@
   /* FIX #3: estilos para la imagen bajo la ficha */
   .ficha-img {
     width: 100%;
+    max-height: 520px;
     height: auto;
     display: block;
     margin-top: 20px;
@@ -383,7 +384,7 @@
     display: block;
   }
   .habitat-name {
-    font-family: 'Space Mono', monospace;
+    font-family: 'Mulish', monospace;
     font-size: 10px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -421,12 +422,12 @@
   }
   .season-block:last-child { margin-bottom: 0; }
   .season-tag {
-    font-family: 'Space Mono', monospace;
+    font-family: 'Mulish', monospace;
     font-size: 9.5px;
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--white);
-    background: var(--olive);
+    background: #7a5228;
     display: inline-block;
     padding: 3px 10px;
     margin-bottom: 10px;
@@ -438,7 +439,7 @@
     line-height: 1.5;
   }
   .season-detail {
-    font-family: 'Space Mono', monospace;
+    font-family: 'Mulish', monospace;
     font-size: 11px;
     color: var(--olive);
     margin-top: 6px;
@@ -464,7 +465,7 @@
   }
   /* FIX #5: referencia al estudio bajo el mapa */
   .map-citation {
-    font-family: 'Space Mono', monospace;
+    font-family: 'Mulish', monospace;
     font-size: 10px;
     color: var(--olive);
     margin-top: 6px;
@@ -487,7 +488,7 @@
     padding-top: 16px;
   }
   .nest-number {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: 'Playwrite HR Lijeva', Georgia, serif;
     font-size: 2.2rem;
     font-weight: 700;
     color: var(--olive);
@@ -495,7 +496,7 @@
     line-height: 1;
   }
   .nest-label {
-    font-family: 'Space Mono', monospace;
+    font-family: 'Mulish', monospace;
     font-size: 10px;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -518,7 +519,7 @@
     background: #fdf8ef;
   }
   .taxon-note-label {
-    font-family: 'Space Mono', monospace;
+    font-family: 'Mulish', monospace;
     font-size: 9px;
     letter-spacing: 0.22em;
     text-transform: uppercase;
@@ -539,7 +540,7 @@
     border-top: 1px solid var(--rule);
   }
   .sources-label {
-    font-family: 'Space Mono', monospace;
+    font-family: 'Mulish', monospace;
     font-size: 9px;
     letter-spacing: 0.22em;
     text-transform: uppercase;
@@ -562,7 +563,7 @@
     color: rgba(255,255,255,0.45);
     text-align: center;
     font-size: 12px;
-    font-family: 'Space Mono', monospace;
+    font-family: 'Mulish', monospace;
     letter-spacing: 0.06em;
     padding: 24px;
     margin-top: 40px;
@@ -736,7 +737,7 @@
       </tbody>
     </table>
     <!-- FIX #3: extensión corregida a .png y estilos aplicados con clase -->
-    <img src="fiofio2.jpg" alt="Fiofío crestiblanco" class="ficha-img" >
+    <img src="fiofio2.jpg" alt="Fiofío crestiblanco" class="ficha-img" viewBox >
   </div>
 
   <!-- NOTA TAXONÓMICA -->
@@ -790,7 +791,7 @@
         <div class="map-svg-wrap">
           <div id="map"></div>
           <!-- FIX #5: referencia al estudio bajo el mapa -->
-          <p class="map-note">Representación simulada de la ruta migratoria del Fío-Fío en América del Sur. Realizado a partir de la fuente mencionada. Naranja: viaje de ida en otoño/invierno · Verde: viaje de vuelta en primavera/verano.</p>
+          <p class="map-note">Representación simulada de la ruta migratoria del Fío-Fío en América del Sur. Realizad a partir de la fuente mencionada. Naranja: viaje de ida en otoño/invierno · Verde: viaje de vuelta en primavera/verano.</p>
           <p class="map-citation">Fuente: Jara et al. (2024).</p>
         </div>
       </div>
@@ -839,7 +840,7 @@
   <div class="audio-block fade-up" style="margin:36px 0;">
     <span class="audio-label">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
-      Grabación en periodo de cría — Hong Kong (subespecie)
+      Grabación en periodo de cría
     </span>
     <audio controls preload="none">
       <source src="https://www.avesdechile.cl/0son/son081hk.mp3" type="audio/mpeg">
@@ -870,8 +871,26 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
   integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
   crossorigin=""></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-polylinedecorator/1.6.0/leaflet.polylineDecorator.min.js"></script>
 
 <script>
+  // ── OBSERVER PRIMERO (independiente del mapa) ──
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        if (entry.target.classList.contains('migration-section')) {
+          setTimeout(function() { map.invalidateSize(); }, 350);
+        }
+      }
+    });
+  }, { threshold: 0.08 });
+
+  document.querySelectorAll('.fade-up').forEach(function(el) {
+    observer.observe(el);
+  });
+
+  // ── MAPA ──
   var map = L.map('map', { attributionControl: false }).setView([-25, -65], 3);
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
@@ -903,13 +922,13 @@
     .openTooltip();
 
   var ruta = [
-    {nombre: "Norte por los Andes",             lat: -51.06, lng: -72.15},
-    {nombre: "Pampas Argentina — ida",           lat: -37.13, lng: -67.08},
-    {nombre: "Caatinga",                         lat:  -5.73, lng: -39.86},
-    {nombre: "Mato Grosso — Centro de Brasil",   lat: -12.63, lng: -61.23},
-    {nombre: "Chaco, Paraguay",                  lat: -22.22, lng: -65.19},
-    {nombre: "Pampas / Andes — vuelta",          lat: -38.13, lng: -65.08},
-    {nombre: "Isla Navarino",                    lat: -54.93, lng: -67.65},
+    {nombre: "Norte por los Andes",           lat: -51.06, lng: -72.15},
+    {nombre: "Pampas Argentina — ida",         lat: -37.13, lng: -67.08},
+    {nombre: "Caatinga",                       lat:  -5.73, lng: -39.86},
+    {nombre: "Mato Grosso — Centro de Brasil", lat: -12.63, lng: -61.23},
+    {nombre: "Chaco, Paraguay",                lat: -22.22, lng: -65.19},
+    {nombre: "Pampas / Andes — vuelta",        lat: -38.13, lng: -65.08},
+    {nombre: "Isla Navarino",                  lat: -54.93, lng: -67.65},
   ];
 
   ruta.forEach(function(punto) {
@@ -931,23 +950,29 @@
     [-54.93, -67.65]
   ];
 
-  L.polyline(coordinadasIda,    { color: '#c98a2f', weight: 3, opacity: 0.9 }).addTo(map);
-  L.polyline(coordinadasVuelta, { color: '#5a6e3a', weight: 3, opacity: 0.9 }).addTo(map);
+  var lineaIda    = L.polyline(coordinadasIda,    { color: '#b89a3a', weight: 3, opacity: 0.9 }).addTo(map);
+  var lineaVuelta = L.polyline(coordinadasVuelta, { color: '#7a5228', weight: 3, opacity: 0.9 }).addTo(map);
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        if (entry.target.classList.contains('migration-section')) {
-          setTimeout(function() { map.invalidateSize(); }, 350);
-        }
-      }
-    });
-  }, { threshold: 0.08 });
+// ── FLECHAS INTEGRADAS AL SVG ──
+map.whenReady(function() {
+  setTimeout(function() {
+    var svgEl = document.querySelector('.leaflet-overlay-pane svg');
+    if (!svgEl) return;
 
-  document.querySelectorAll('.fade-up').forEach(function(el) {
-    observer.observe(el);
-  });
+    var defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
+    defs.innerHTML =
+      '<marker id="flecha-ida" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto" markerUnits="strokeWidth">' +
+        '<path d="M0,0 L0,5 L5,2.5 z" fill="#b89a3a"/>' +
+      '</marker>' +
+      '<marker id="flecha-vuelta" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto" markerUnits="strokeWidth">' +
+        '<path d="M0,0 L0,5 L5,2.5 z" fill="#7a5228"/>' +
+      '</marker>';
+    svgEl.insertBefore(defs, svgEl.firstChild);
+
+    if (lineaIda._path)    lineaIda._path.setAttribute('marker-mid', 'url(#flecha-ida)');
+    if (lineaVuelta._path) lineaVuelta._path.setAttribute('marker-mid', 'url(#flecha-vuelta)');
+  }, 100);
+});
 </script>
 </body>
 </html>
